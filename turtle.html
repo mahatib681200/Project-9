@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Turtle Project</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Python Turtle Project</h1>
+            &nbsp;
+        </header>
+        <section>
+            <h2>About the Project</h2>
+            <p style="color: #391d28;">This project involved using python turtle to create a graphic scene of some sort including certain scene elements.
+                I used the buldiing block shape functions such as draw_rectangle, draw_square, draw_triangle, and draw_circle to create a scene with 
+                one house, a sun, and 2 clouds. To make building a house or cloud easier to create, I then refactored the code using "for loops" to 
+                repeat drawing shapes in different positions to do so. With this new refactored code, I created a more complex scene with multiple houses,
+                more clouds, and even a road as well.
+            </p>
+        </section>
+        <section>
+            <h2>Sample Code</h2>
+            <p style="color: #391d28;">This piece of code shows the function for creating a cloud. This function involves creating multiple 
+                circles that overlap to create each cloud. The parameters for calling the function include:
+            </p> &nbsp;
+            <h4>t: calls the turtle graphics tool</h4>
+            <h4>x , y: coordinates for cloud starting position</h4>
+            <h4>size: makes the clouds bigger or smaller using a scale factor defaulted at 1.0</h4>
+            <div class="code-container">
+                <code>
+                    <span class="keyword">def</span>
+                    <span class="function">draw_cloud</span>(<span class="parameter">t</span>,
+                    <span class="parameter">x</span>, 
+                    <span class="parameter">y</span>,
+                    <span class="parameter">size</span>=<span class="string">1.0</span>):
+                    <br>
+                    <span class="function">jump_to</span>(<span class="parameter">t</span>,
+                    <span class="parameter">x</span>,
+                    <span class="parameter">y</span>)
+                    <br>
+                    <span class="function">t.pencolor</span>(<span class="string">"white"</span>)
+                    <br>
+                    <br>
+                    <span class="parameter">positions</span>
+                    =
+                    [(<span class="string">0</span>,<span class="string">0</span>),
+                    (<span class="parameter">size</span>
+                    *
+                    <span class="string">15</span>,
+                    <span class="parameter">size</span>
+                    *
+                    <span class="string">10</span>),
+                    (<span class="parameter">size</span>
+                    *
+                    <span class="string">30</span>,
+                    <span class="string">0</span>),
+                    (<span class="parameter">size</span>
+                    *
+                    <span class="string">45</span>,
+                    <span class="parameter">size</span>
+                    *
+                    <span class="string">5</span>),
+                    (<span class="parameter">size</span>
+                    *
+                    <span class="string">60</span>,
+                    <span class="string">0</span>)]
+                    &nbsp;
+                    <br>
+                    <br>
+                    <span class="keyword">for</span>
+                    <span class="parameter">pos_x</span>,
+                    <span class="parameter">pos_y</span>
+                    <span class="keyword">in</span>
+                    <span class="parameter">positions</span>:
+                    <br> &nbsp;
+                    <span class="function">jump_to</span>(<span class="parameter">t</span>,
+                    <span class="parameter">x</span>
+                    +
+                    <span class="parameter">pos_x</span>,
+                    <span class="parameter">y</span>
+                    +
+                    <span class="parameter">pos_y</span>)
+                    <br> &nbsp;
+                    <span class="function">draw_circle</span>(<span class="parameter">t</span>,
+                    <span class="parameter">size</span>
+                    *
+                    <span class="string">20</span>,
+                    <span class="string">"white"</span>)
+                </code>
+            </div>
+        </section>
+        <section>
+            <h2>Final Scene</h2>
+            <p style="color: #391d28;">Here is the final project scene including a neighborhood street of houses, many clouds, a road, and a bright sun:</p>
+            <div class="scene-container">
+              <img srcset="turtle.png" alt="Python Turtle Scene - an image with four houses, a road, four clouds, and a yellow sun" class="scene-image">
+            </div>
+            <br>
+            <p style="color: #391d28;">This scene combines many basic shapes to create complex grapics such as houses and clouds. Items like the houses
+                are created with rectangles, squares, and triangles, whereas the clouds are created with multiple overlapping circles, to create a 
+                cheerful neighborhood scene.
+            </p>
+        </section>
+        <footer>
+            &nbsp;<p>&copy; 2025 Mahati Balasubramanian | background image from: <a href="https://www.redbubble.com/i/metal-print/Retro-Gradient-Aesthetic-Pink-and-Purple-Aura-by-mystikwhale/136916525.0JXQP">https://www.redbubble.com/</a></p>
+        </footer>
+    </body>
